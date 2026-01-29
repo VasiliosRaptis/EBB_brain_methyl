@@ -23,7 +23,7 @@ cd /exports/cmvm/eddie/smgphs/groups/Quantgen/Users/vasilis/PHD/EBB_methylation/
 find . -name '*wgt*' -exec realpath {} + > ../$name.ALL.list
 # make profile table & summaries
 cd /exports/cmvm/eddie/smgphs/groups/Quantgen/Users/vasilis/PHD/EBB_methylation/MWAS/
-Rscript $software/fusion_twas-master/utils/FUSION.profile_wgt.R $name.list > $name.ALL.profile 2> $name.ALL.profile.err
+Rscript $software/fusion_twas-master/utils/FUSION.profile_wgt.R $name.ALL.list > $name.ALL.profile 2> $name.ALL.profile.err
 
 ### make weights summaries for HERITABLE CpGs (hsq p < 0.05 & r2 > 0.01)
 cd /exports/cmvm/eddie/smgphs/groups/Quantgen/Users/vasilis/PHD/EBB_methylation/MWAS

@@ -103,6 +103,7 @@ echo "Analysis finished at: $(date)"
 ### merge all correlation tables
 chunks_finished=$(ls -1 $OUT/scores/EBB/summary/scores.cor.table.chunk* | wc -l)
 if (( $chunks_finished == 49 )); then
+  >$OUT/scores/EBB/summary/scores.cor.table.txt
   echo -e "cpg\tmodel\tcorr\tcorr.pv\tcorr.lci\tcorr.uci\tr2" > $OUT/scores/EBB/summary/scores.cor.table.txt
   cat $OUT/scores/EBB/summary/scores.cor.table.txt $OUT/scores/EBB/summary/scores.cor.table.chunk* >> $OUT/scores/EBB/summary/scores.cor.table.txt
 fi
