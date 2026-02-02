@@ -48,5 +48,4 @@ rm $EBB/MWAS/$name/temp.variants.to.remove
 
 ## create .tar.bz2 file
 cd ../
-tar -cvjSf
- 
+tar -cvjSf $name.tar.bz2 $name
